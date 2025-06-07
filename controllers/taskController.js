@@ -1,4 +1,4 @@
-const Task=require('../models/Task');
+const Task=require('../models/task');
 //api for creating task
 exports.createTask=async(req,res)=>{
     try{
