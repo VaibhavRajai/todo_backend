@@ -23,7 +23,7 @@ exports.getAllTasks= async (req,res)=>{
 //api for getting a specific task by id
 exports.getTaskById=async(req,res)=>{
     try{
-        const {id}=req.body;
+        const {id}=req.params;
         const task=await Task.findById(id)
         if(!task) return res.status(404).json({message:'Task not found'})
             res.json(task) 
